@@ -1,0 +1,55 @@
+.navbar {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 1vw 10vw;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 7vw;
+}
+
+.hiring {
+  margin-left: 1vw;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, rgb(255, 208, 0), red);
+  padding: 0.5vw;
+  font-size: 0.7em;
+  color: white;
+}
+
+.joinWaitNav {
+  margin: 0 1vw !important;
+  padding: 10px 20px;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+  border: none;
+  height: 7vh;
+  font-size: 1.2em;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 1vh 5vw;
+  }
+  .logo {
+    width: 20vw;
+  }
+  .alink {
+    opacity: 0;
+  }
+  .joinWaitNav {
+    opacity: 0;
+  }
+}
