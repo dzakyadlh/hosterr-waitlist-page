@@ -11,7 +11,6 @@ const LandingPage = () => {
   return (
     <div className="main-container">
       <Navbar />
-
       <div className="container-40">
         <div className="image-group">
           <img src={HeroImageModel} alt="heromodel" className="heromodel" />
