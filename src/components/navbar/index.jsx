@@ -1,12 +1,21 @@
+import * as ReactDOM from "react-dom/client";
 import "./style.css";
 import Logo from "../../assets/Logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
-  const toggleBtn = () => {
-    const x = document.getElementsByClassName("dropdownNav");
-    x.style.display = "block";
+  // const toggleBtn = () => {
+  //   ddmenu.style.display = "block";
+  // };
+  const ddmenu = document.getElementsByClassName("dropdown_menu")[0];
+  window.onclick = function (e) {
+    if (e.target.matches(".toggle-btn")) {
+      ddmenu.render(ddmenu);
+      e.preventDefault();
+    } else {
+      ddmenu.style.display = "none";
+    }
   };
   return (
     <div className="navbar">
@@ -28,16 +37,16 @@ const Navbar = () => {
       </a>
       <div className="dropdown_menu">
         <li>
-          <a className="alink">Plans</a>
+          <a className="dropdown_item">Plans</a>
         </li>
         <li>
-          <a className="alink">Find domain</a>
+          <a className="dropdown_item">Find domain</a>
         </li>
         <li>
-          <a className="alink">Why Hosterr</a>
+          <a className="dropdown_item">Why Hosterr</a>
         </li>
         <li>
-          <a className="alink">Sign In</a>
+          <a className="dropdown_item">Sign In</a>
         </li>
       </div>
     </div>

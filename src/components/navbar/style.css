@@ -44,10 +44,11 @@
 .dropdown_menu {
   position: absolute;
   z-index: 20;
-  right: 2rem;
+  right: 1rem;
   top: 1vh;
   background-color: rgba(0, 0, 0, 0.6);
   width: 50vw;
+  display: none;
 }
 .dropdown_menu li {
   padding: 1rem;
@@ -56,6 +57,10 @@
 .dropdown_menu li a {
   color: white;
 }
+.dropdown_menu li a:hover {
+  color: goldenrod;
+}
+
 @media only screen and (max-width: 1000px) {
   .navbar {
     padding: 1vh 5vw;
